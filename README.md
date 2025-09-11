@@ -224,7 +224,6 @@ print(response)
 ## 📚 References  
 - [LangChain Docs](https://docs.langchain.com)  
 - [LangSmith](https://smith.langchain.com) → Monitoring & Evaluation  
-- [Structured Outputs Blog](https://www.linkedin.com/pulse/structured-outputs-from-llms-langchain-output-parsers-vijay-chaudhary-wgjqc)  
 
 ---
 
