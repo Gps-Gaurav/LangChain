@@ -3,13 +3,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# HuggingFaceEndpoint will auto-pick HUGGINGFACEHUB_API_TOKEN
 llm = HuggingFaceEndpoint(
-    repo_id="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    repo_id="HuggingFaceH4/zephyr-7b-beta",
     task="text-generation"
 )
 
+# Wrap with chat interface
 model = ChatHuggingFace(llm=llm)
 
-result = model.invoke("What is the capital of India")
-
+# Run query
+result = model.invoke("What is the capital of India?")
 print(result.content)
