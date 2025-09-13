@@ -1,11 +1,13 @@
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from dotenv import load_dotenv
 
 load_dotenv()
 
-model = ChatOpenAI()
-
+model = ChatGoogleGenerativeAI(
+    model="gemini-1.5-flash",
+    google_api_key="AIzaSyAlU06lSQ8CfPuh6ry0WnJjL6MdYTfRvoE"
+)
 chat_history = [
     SystemMessage(content='You are a helpful AI assistant')
 ]
